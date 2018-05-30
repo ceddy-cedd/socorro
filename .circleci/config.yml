@@ -59,7 +59,7 @@ jobs:
       - run:
           name: Run lints
           working_directory: /socorro
-          command: make dockerlint
+          command: docker run local/socorro_webapp /webapp-frontend/deps/node_modules/.bin/eslint
 
       - run:
           name: Run tests
